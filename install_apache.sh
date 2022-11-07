@@ -8,10 +8,10 @@ if [[ "$USER_UID" -ne 0 ]]; then
 	exit 1
 fi
 
-if [[ "$OS_ID" == "ubuntu" ]]; then
+if [[ "$OS_ID" =~ "ubuntu" ]]; then
   apt update && apt -y install apache2
   echo "<h1>Andriy Bobrovych</h1>" > /var/www/html/index.html
-elif [[ "$OS_ID" == "centos" ]]; then
+elif [[ "$OS_ID" =~ "centos" ]]; then
   yum -y install httpd
   echo "<h1>Andriy Bobrovych</h1>" > /usr/share/httpd/noindex/index.html
 fi 
