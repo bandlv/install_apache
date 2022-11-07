@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 USER_UID=$(echo $UID)
 OS_ID=$(cat /etc/os-release | grep "^ID=" | cut -d"=" -f2)
