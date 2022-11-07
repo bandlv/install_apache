@@ -14,4 +14,5 @@ if [[ "$OS_ID" =~ "ubuntu" ]]; then
 elif [[ "$OS_ID" =~ "centos" ]]; then
   yum -y install httpd
   echo "<h1>Andriy Bobrovych</h1>" > /usr/share/httpd/noindex/index.html
+  systemctl start httpd
 fi 
